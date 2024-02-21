@@ -1,0 +1,79 @@
+body{
+    background-image: url(../assets/images/bg.jpg);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-family: sans-serif;
+    position: relative;
+}
+
+.btn-custom{
+    position: absolute;
+    padding: 4px 20px;
+    border: none;
+    bottom: 20px;
+    left: 50px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: normal;
+    color: white;
+    background-color: rgba(255, 0, 0, 0.85);
+}
+
+.btn-custom:hover{
+    transform: translateY(-5px);
+    transition: all 500ms;
+    position: absolute;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(150, 1, 1, 0.85);
+}
+
+
+
+.role{
+    position: absolute;
+    padding: 20px;
+    top: 10px;
+    right: 0;
+    border:2px solid white;
+    margin-right: 10px;
+}
+
+
+.offcanvas.offcanvas-start{
+    width: 225px;
+}
+
+.side-bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.offcanvas{
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.offcanvas-backdrop.show{
+    opacity: 0.1;
+}
+
+.side-bar-access-btn{
+    padding: 10px 20px;
+    border: 3px solid white;
+    text-decoration: none;
+    color: white;
+    margin-left: 40px;
+    border-radius: 5px;
+}

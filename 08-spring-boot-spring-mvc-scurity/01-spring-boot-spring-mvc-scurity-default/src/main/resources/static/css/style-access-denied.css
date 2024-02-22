@@ -169,13 +169,19 @@ svg.key {
 }
 
 .back-to-home{
-    padding: 10px 20px;
-    cursor: pointer;
+    padding: 15px 25px;
     position: absolute;
-    top: 336PX;
-    left: 676PX;
+    top: 49px;
+    left: 68px;
+    color: var(--color-theme);
+    border: 2px solid var(--color-theme);
+    text-decoration: none;
+    border-radius: 30px;
 }
 
 .back-to-home:hover{
-    text-decoration: underline;
+    transition: all 500ms;
+    color: var(--color-bg);
+    background-color: var(--color-theme);
+    border-radius: 5px;
 }

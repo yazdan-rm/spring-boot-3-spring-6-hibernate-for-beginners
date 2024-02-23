@@ -1,5 +1,6 @@
 package com.luv2code.springboot.demosecurity.dao;
 import com.luv2code.springboot.demosecurity.entity.Instructor;
+import com.luv2code.springboot.demosecurity.entity.InstructorDetail;
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,5 +39,26 @@ public class AppImpl implements AppDAO {
 
         // delete the instructor
         entityManager.remove(tempInstructor);
+    }
+
+    @Override
+    public InstructorDetail findInstructorDetailById(Long theId) {
+        return entityManager.find(InstructorDetail.class, theId);
+    }
+
+    @Override
+    @Transactional
+    public void deleteInstructorDetailById(Long theId) {
+
+        // retrieve instructor detail
+        InstructorDetail tempInstructorDetail = entityManager.find(InstructorDetail.class, theId);
+
+
+        //remove the associated object reference
+        // break bi_directional link
+        tempInstructorDetail.getInstructor().setInstructorDetail(null);
+
+        // delete the instructor detail
+        entityManager.remove(tempInstructorDetail);
     }
 }

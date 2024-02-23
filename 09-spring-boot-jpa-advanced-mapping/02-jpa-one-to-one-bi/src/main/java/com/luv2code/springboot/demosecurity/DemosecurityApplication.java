@@ -21,8 +21,33 @@ public class DemosecurityApplication {
 
 //			createInstructor(appDAO);
 //			findInstructor(appDAO);
-			deleteInstructor(appDAO);
+//			deleteInstructor(appDAO);
+//			findInstructorDetail(appDAO);
+			deleteInstructorDetail(appDAO);
 		};
+	}
+
+	private void deleteInstructorDetail(AppDAO appDAO) {
+		Long theId = 6L;
+		System.out.println("Deleting instructor detail id: " +theId);
+		appDAO.deleteInstructorDetailById(theId);
+		System.out.println("Done!");
+	}
+
+	private void findInstructorDetail(AppDAO appDAO) {
+
+		// get the instructor detail object
+		Long theId = 2L;
+		InstructorDetail tempInstructorDetail = appDAO.findInstructorDetailById(theId);
+
+		// print the instance detail
+		System.out.println("TempInstructorDetail: " + tempInstructorDetail);
+
+		// print the associated instructor
+		System.out.println("The associated instructor: " + tempInstructorDetail.getInstructor());
+		System.out.println("Done!");
+
+
 	}
 
 	private void deleteInstructor(AppDAO appDAO) {
@@ -45,13 +70,13 @@ public class DemosecurityApplication {
 
 		// create the Instructor
 		Instructor tempInstructor =
-				new Instructor("Chad", "Darby", "darby@luv2code.com");
+				new Instructor("Yazdan", "RafieeManesh", "yrafieemanesh@gmail.com");
 
 		// create the instructorDetail
 		InstructorDetail tempInstructorDetail =
 				new InstructorDetail(
-						"https://www.luv2code.com/youtube",
-						"Luv 2 code !!"
+						"youtube",
+						"Programming"
 				);
 
 		// associate the objects

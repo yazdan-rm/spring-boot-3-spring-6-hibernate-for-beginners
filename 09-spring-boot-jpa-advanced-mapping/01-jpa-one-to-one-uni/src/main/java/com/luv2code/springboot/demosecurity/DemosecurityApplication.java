@@ -21,7 +21,7 @@ public class DemosecurityApplication {
 
 //			createInstructor(appDAO);
 //			findInstructor(appDAO);
-			deleteInstructor(appDAO);
+//			deleteInstructor(appDAO);
 		};
 	}
 
